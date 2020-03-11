@@ -9,7 +9,13 @@ export function getSelectInstance(elem) {
 }
 
 const autocomplete = document.querySelectorAll('.autocomplete');
-M.Autocomplete.init(autocomplete);
+M.Autocomplete.init(autocomplete, {
+  data: {
+    Apple: null,
+    Microsoft: null,
+    Google: 'https://placehold.it/250x250',
+  },
+});
 
 export function getAutocompleteInstance(elem) {
   return M.Autocomplete.getInstance(elem);
@@ -18,8 +24,9 @@ export function getAutocompleteInstance(elem) {
 const datepicker = document.querySelectorAll('.datepicker');
 M.Datepicker.init(datepicker, {
   showClearBtn: true,
+  format: 'yyyy-mm',
 });
 
-export function getdatepickerInstance(elem) {
+export function getDatepickerInstance(elem) {
   return M.Datepicker.getInstance(elem);
 }
