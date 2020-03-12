@@ -9,13 +9,7 @@ export function getSelectInstance(elem) {
 }
 
 const autocomplete = document.querySelectorAll('.autocomplete');
-M.Autocomplete.init(autocomplete, {
-  data: {
-    Apple: null,
-    Microsoft: null,
-    Google: 'https://placehold.it/250x250',
-  },
-});
+M.Autocomplete.init(autocomplete);
 
 export function getAutocompleteInstance(elem) {
   return M.Autocomplete.getInstance(elem);
